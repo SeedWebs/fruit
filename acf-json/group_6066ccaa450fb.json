@@ -1,11 +1,11 @@
 {
-    "key": "group_5db94525f3373",
-    "title": "Block: Post Slider",
+    "key": "group_6066ccaa450fb",
+    "title": "Block: Product Grid",
     "fields": [
         {
-            "key": "field_5db945260503c",
-            "label": "Content Source",
-            "name": "content_source",
+            "key": "field_6066ccaa4b497",
+            "label": "Product Source",
+            "name": "product_source",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -16,8 +16,8 @@
                 "id": ""
             },
             "choices": {
-                "latest": "Latest Post",
-                "categories": "Categories",
+                "latest": "Latest Products",
+                "categories": "Product Categories",
                 "custom": "Custom Select"
             },
             "default_value": "latest",
@@ -29,7 +29,7 @@
             "placeholder": ""
         },
         {
-            "key": "field_5db9452605047",
+            "key": "field_6066ccaa4b4a0",
             "label": "Categories",
             "name": "categories",
             "type": "taxonomy",
@@ -38,9 +38,9 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_5db945260503c",
+                        "field": "field_6066ccaa4b497",
                         "operator": "==",
-                        "value": "Categories"
+                        "value": "categories"
                     }
                 ]
             ],
@@ -49,7 +49,7 @@
                 "class": "",
                 "id": ""
             },
-            "taxonomy": "category",
+            "taxonomy": "product_cat",
             "field_type": "checkbox",
             "add_term": 0,
             "save_terms": 0,
@@ -59,7 +59,7 @@
             "allow_null": 0
         },
         {
-            "key": "field_5db945260504e",
+            "key": "field_6066ccaa4b4bf",
             "label": "Custom Select",
             "name": "custom",
             "type": "post_object",
@@ -68,7 +68,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_5db945260503c",
+                        "field": "field_6066ccaa4b497",
                         "operator": "==",
                         "value": "custom"
                     }
@@ -80,8 +80,7 @@
                 "id": ""
             },
             "post_type": [
-                "post",
-                "page"
+                "product"
             ],
             "taxonomy": "",
             "allow_null": 0,
@@ -90,55 +89,8 @@
             "ui": 1
         },
         {
-            "key": "field_5db9452605054",
-            "label": "Template",
-            "name": "template",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "Card": "Card",
-                "Caption": "Caption",
-                "Headline": "Headline",
-                "Hero": "Hero",
-                "List": "List"
-            },
-            "default_value": false,
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
-            "key": "field_5db9452605059",
-            "label": "Show Author?",
-            "name": "show_author",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 1,
-            "ui": 1,
-            "ui_on_text": "Show",
-            "ui_off_text": "Hide"
-        },
-        {
-            "key": "field_5db945260505e",
-            "label": "Number of Posts",
+            "key": "field_6066ccaa4b4ce",
+            "label": "Number of Products",
             "name": "posts_per_page",
             "type": "number",
             "instructions": "",
@@ -146,7 +98,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_5db945260503c",
+                        "field": "field_6066ccaa4b497",
                         "operator": "!=",
                         "value": "custom"
                     }
@@ -166,35 +118,7 @@
             "step": 1
         },
         {
-            "key": "field_5db9452605063",
-            "label": "Mobile Columns",
-            "name": "mobile_columns",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "1": "1",
-                "1.2": "1.2",
-                "1.4": "1.4",
-                "2": "2",
-                "3": "3"
-            },
-            "default_value": 1,
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
-            "key": "field_5db9452605069",
+            "key": "field_608e01fff4836",
             "label": "Desktop Columns",
             "name": "desktop_columns",
             "type": "select",
@@ -202,7 +126,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
@@ -214,7 +138,7 @@
                 "5": "5",
                 "6": "6"
             },
-            "default_value": 3,
+            "default_value": 4,
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -228,7 +152,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/post-slider"
+                "value": "acf\/product-grid"
             }
         ]
     ],
@@ -240,5 +164,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1619942379
+    "modified": 1619927923
 }
