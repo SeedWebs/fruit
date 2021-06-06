@@ -967,6 +967,141 @@
             ]
         },
         {
+            "key": "field_60bb9015d56db",
+            "label": "Enable Line Notify?",
+            "name": "enable_line_notify",
+            "type": "true_false",
+            "instructions": "Please read <a href=\"https:\/\/docs.seedwebs.com\/article\/85-line-notify-setting-for-sales-page\" target=\"_blank\"><b>Line Notify Setting for Sales Page<\/b><\/a>.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_607530bea0aa9",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Enable",
+            "ui_off_text": "Disable"
+        },
+        {
+            "key": "field_60b7bad9b52e6",
+            "label": "Line Notify token",
+            "name": "line_notify_token",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60bb9015d56db",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_60bb9374c502d",
+            "label": "Fields",
+            "name": "fields",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60bb9015d56db",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "textarea-1, radio-1, name-1, email-1, number-2, upload-1, textarea-2",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_60bb93c6c502e",
+            "label": "Labels",
+            "name": "labels",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60bb9015d56db",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "คำสั่งซื้อ, ช่องทางการชำระเงิน, ชื่อ, อีเมล, เบอร์โทร, สลิป, ที่อยู่",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_60bb663c88ca1",
+            "label": "Thank You Message",
+            "name": "thank_you_message",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60bb9015d56db",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
             "key": "field_6049ba3d2b149",
             "label": "Design",
             "name": "",
@@ -1161,5 +1296,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1618823216
+    "modified": 1622952109
 }
