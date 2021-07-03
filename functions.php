@@ -21,7 +21,7 @@ function fruit_scripts() {
 	$theme_version = wp_get_theme()->get( 'Version' );
 
 	wp_enqueue_style('fruit', get_theme_file_uri('/css/style.css'), array(), $theme_version );
-	wp_enqueue_script( 'fruit', get_stylesheet_directory_uri('/js/main.js'), array(),  $theme_version, true);
+	wp_enqueue_script('fruit', get_theme_file_uri('/js/main.js'), array(),  $theme_version, true);
 	
 }
 add_action( 'wp_enqueue_scripts', 'fruit_scripts' , 20 );
