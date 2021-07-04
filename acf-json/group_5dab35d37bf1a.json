@@ -16,7 +16,7 @@
                 "id": ""
             },
             "choices": {
-                "latest": "Latest Product",
+                "latest": "Latest Posts",
                 "categories": "Categories",
                 "custom": "Custom Select"
             },
@@ -268,5 +268,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1619942366
+    "modified": 1625295304
 }

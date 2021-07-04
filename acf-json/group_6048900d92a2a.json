@@ -1095,7 +1095,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "ขอบคุณสำหรับคำสั่งซื้อ ทีมงานจะตรวจสอบและยืนยันโดยเร็วที่สุด",
             "tabs": "all",
             "toolbar": "basic",
             "media_upload": 1,
@@ -1296,5 +1296,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1622952109
+    "modified": 1625299237
 }

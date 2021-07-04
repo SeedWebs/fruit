@@ -4,8 +4,14 @@
  * For all custom js codes.
  */
 
+
+
 /* VANILLA JS */
-console.log("Fruit Theme");
+// console.log("Fruit Theme");
+
+
+
+
 
 /* JQUERY */
 /*
