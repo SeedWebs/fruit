@@ -1,6 +1,6 @@
 {
     "key": "group_6048900d92a2a",
-    "title": "Sale Page",
+    "title": "Sales Page",
     "fields": [
         {
             "key": "field_6049ba5a2b14a",
@@ -17,6 +17,25 @@
             },
             "placement": "top",
             "endpoint": 0
+        },
+        {
+            "key": "field_610cf0cf1aaed",
+            "label": "Title Text",
+            "name": "title_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_6049bc089e221",
@@ -137,7 +156,7 @@
                 ]
             ],
             "wrapper": {
-                "width": "20",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -188,10 +207,10 @@
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "",
+                "class": "-border",
                 "id": ""
             },
-            "collapsed": "",
+            "collapsed": "field_6048905e3b2ad",
             "min": 0,
             "max": 0,
             "layout": "table",
@@ -323,6 +342,35 @@
                     "step": ""
                 },
                 {
+                    "key": "field_6108cf3613c0b",
+                    "label": "In Stock",
+                    "name": "stock",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_610a3f4a07c03",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": 0,
+                    "max": "",
+                    "step": 1
+                },
+                {
                     "key": "field_607bc6c478152",
                     "label": "Selected?",
                     "name": "selected",
@@ -344,6 +392,44 @@
             ]
         },
         {
+            "key": "field_610bbf50dd23d",
+            "label": "Select One Product",
+            "name": "select_one",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "-border",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No"
+        },
+        {
+            "key": "field_610bbf0cdd23c",
+            "label": "Hide Product Amount",
+            "name": "hide_amount",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "-border",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Hide",
+            "ui_off_text": "Show"
+        },
+        {
             "key": "field_6072f38cda5a4",
             "label": "Currency",
             "name": "currency",
@@ -352,8 +438,8 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
-                "class": "",
+                "width": "25",
+                "class": "-border",
                 "id": ""
             },
             "default_value": " บาท",
@@ -371,8 +457,8 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
-                "class": "",
+                "width": "25",
+                "class": "-border",
                 "id": ""
             },
             "choices": {
@@ -383,6 +469,106 @@
             "default_value": "right",
             "layout": "horizontal",
             "return_format": "value"
+        },
+        {
+            "key": "field_610a3f4a07c03",
+            "label": "Limit Purchase",
+            "name": "limit_purchase",
+            "type": "true_false",
+            "instructions": "Set limit items from In Stock.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Limit",
+            "ui_off_text": "No"
+        },
+        {
+            "key": "field_610a417bea0e7",
+            "label": "Sold Out Text",
+            "name": "sold_out_text",
+            "type": "text",
+            "instructions": "Display if In Stock is 0.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_610a3f4a07c03",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "ขายหมดแล้ว!",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_610a42651695e",
+            "label": "Show Stock?",
+            "name": "show_stock",
+            "type": "true_false",
+            "instructions": "Show under product description",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_610a3f4a07c03",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Show",
+            "ui_off_text": "Hide"
+        },
+        {
+            "key": "field_610a42241695d",
+            "label": "In Stock Text",
+            "name": "instock_text",
+            "type": "text",
+            "instructions": "Use [instock] for stock amount.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_610a42651695e",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "มีสินค้า [instock] ชิ้น",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_6049e353d0e1e",
@@ -527,6 +713,35 @@
             "step": ""
         },
         {
+            "key": "field_610a56a89cb53",
+            "label": "COD Cost",
+            "name": "cod_cost",
+            "type": "number",
+            "instructions": "Cash on Delivery Cost (คิดเพิ่มหากเลือกเก็บเงินปลายทาง)",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6049eb0dd11cf",
+                        "operator": "==",
+                        "value": "cod"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
             "key": "field_6049eb0dd11cf",
             "label": "Calculation Steps",
             "name": "steps",
@@ -550,6 +765,7 @@
             "choices": {
                 "start": "Starting Flat Cost",
                 "products": "Add Products Shipping Cost",
+                "cod": "Add Cash on Delivery (COD) Cost",
                 "free": "Free Shipping if Buy More"
             },
             "allow_custom": 0,
@@ -691,7 +907,7 @@
         },
         {
             "key": "field_6072a9e25cb19",
-            "label": "Summary Table",
+            "label": "Summary Table Text",
             "name": "table",
             "type": "group",
             "instructions": "",
@@ -721,7 +937,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "20",
+                        "width": "16.666",
                         "class": "",
                         "id": ""
                     },
@@ -740,7 +956,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "20",
+                        "width": "16.666",
                         "class": "",
                         "id": ""
                     },
@@ -759,7 +975,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "20",
+                        "width": "16.666",
                         "class": "",
                         "id": ""
                     },
@@ -778,7 +994,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "20",
+                        "width": "16.666",
                         "class": "",
                         "id": ""
                     },
@@ -789,19 +1005,38 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_6072fe5d66687",
-                    "label": "Grand Total",
-                    "name": "grand_total",
+                    "key": "field_610a5cd3a3715",
+                    "label": "Free Shipping",
+                    "name": "free_shipping",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "20",
+                        "width": "16.666",
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "รวมทั้งสิ้น",
+                    "default_value": "Free!",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6072fe5d66687",
+                    "label": "Total",
+                    "name": "total",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "16.666",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "รวม",
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
@@ -1075,33 +1310,6 @@
             "maxlength": ""
         },
         {
-            "key": "field_60bb663c88ca1",
-            "label": "Thank You Message",
-            "name": "thank_you_message",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_60bb9015d56db",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "ขอบคุณสำหรับคำสั่งซื้อ ทีมงานจะตรวจสอบและยืนยันโดยเร็วที่สุด",
-            "tabs": "all",
-            "toolbar": "basic",
-            "media_upload": 1,
-            "delay": 0
-        },
-        {
             "key": "field_6049ba3d2b149",
             "label": "Design",
             "name": "",
@@ -1219,7 +1427,7 @@
             "conditional_logic": 0,
             "wrapper": {
                 "width": "50",
-                "class": "",
+                "class": "-border",
                 "id": ""
             },
             "return_format": "id",
@@ -1242,7 +1450,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -1266,7 +1474,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -1277,6 +1485,52 @@
             "min": "",
             "max": "",
             "step": ""
+        },
+        {
+            "key": "field_610ce69171dde",
+            "label": "Buy Now Button",
+            "name": "buy_now_button",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Show",
+            "ui_off_text": "Hide"
+        },
+        {
+            "key": "field_610ce6b971ddf",
+            "label": "Buy Now Text",
+            "name": "buy_now_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_610ce69171dde",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "สั่งซื้อ!",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -1296,5 +1550,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1625299237
+    "modified": 1628242417
 }
