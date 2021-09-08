@@ -438,7 +438,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "25",
+                "width": "16.6666",
                 "class": "-border",
                 "id": ""
             },
@@ -449,6 +449,28 @@
             "maxlength": ""
         },
         {
+            "key": "field_613765f1db6f7",
+            "label": "Number of decimals",
+            "name": "decimals",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "16.6666",
+                "class": "-border",
+                "id": ""
+            },
+            "choices": {
+                "0": "0",
+                "2": "0.00"
+            },
+            "allow_null": 0,
+            "default_value": 0,
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
             "key": "field_6072f66696a44",
             "label": "Currency Position",
             "name": "currency_position",
@@ -457,7 +479,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "25",
+                "width": "16.6666",
                 "class": "-border",
                 "id": ""
             },
@@ -1550,5 +1572,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1628242417
+    "modified": 1631020937
 }

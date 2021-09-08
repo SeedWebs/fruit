@@ -17,6 +17,7 @@
             },
             "choices": {
                 "latest": "Latest Posts",
+                "oldest": "Oldest Posts",
                 "categories": "Categories",
                 "custom": "Custom Select"
             },
@@ -88,6 +89,39 @@
             "multiple": 1,
             "return_format": "id",
             "ui": 1
+        },
+        {
+            "key": "field_61372ac627eca",
+            "label": "Order",
+            "name": "order",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5dabc8aa1fda1",
+                        "operator": "==",
+                        "value": "categories"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Latest": "Latest",
+                "Oldest": "Oldest"
+            },
+            "default_value": "Latest",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
         },
         {
             "key": "field_5dabcafb03a35",
@@ -268,5 +302,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1625295304
+    "modified": 1631006907
 }
